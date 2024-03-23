@@ -1,7 +1,10 @@
-import React from "react";
-
+import EditTaskPage from "@/components/EditTaskPage";
 const EditById = () => {
-  return <div>Edit Page</div>;
+  return (
+    <>
+      <EditTaskPage />
+    </>
+  );
 };
 
 export default EditById;

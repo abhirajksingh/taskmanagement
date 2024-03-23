@@ -1,9 +1,9 @@
-import Table from "@/components/Table";
+import TaskPage from "./task/page";
 
 export default function Home() {
   return (
     <div className=" h-screen w-full  ">
-      <Table />
+      <TaskPage />
     </div>
   );
 }
