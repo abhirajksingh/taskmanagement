@@ -2,7 +2,18 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+# Package Must be installed
+
+```bash
+npm install clsx
+npm install framer-motion
+npm install tailwind-merge
+npm install uuid
+
+```
+After installing the Package,
+
+Run the development server:
 
 ```bash
 npm run dev
