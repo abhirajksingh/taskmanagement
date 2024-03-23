@@ -2,7 +2,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-# Package Must be installed
+## Package Must be installed
 
 ```bash
 npm install clsx
