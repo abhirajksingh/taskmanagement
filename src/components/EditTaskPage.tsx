@@ -56,22 +56,17 @@ const EditTaskPage = () => {
 
   // Handler for saving the updated task
   const handleSave = () => {
-    if (task !== null) {
-      const updatedTask = { ...task, title: updatedTitle };
-      const taskDataString = localStorage.getItem("tasks");
-      if (taskDataString) {
-        const taskData = JSON.parse(taskDataString);
-        const updatedTaskData = taskData.map((item: { id: string }) => {
-          if (item.id === id) {
-            return updatedTask;
-          }
-          return item;
-        });
-        localStorage.setItem("tasks", JSON.stringify(updatedTaskData));
-      }
-    } else {
-      // Handle the case where task is null
-      console.error("Task is null");
+    let updatedTask = { ...(task ?? {}), title: updatedTitle };
+    const taskDataString = localStorage.getItem("tasks");
+    if (taskDataString) {
+      const taskData = JSON.parse(taskDataString);
+      const updatedTaskData = taskData.map((item: { id: string }) => {
+        if (item.id === id) {
+          return updatedTask;
+        }
+        return item;
+      });
+      localStorage.setItem("tasks", JSON.stringify(updatedTaskData));
     }
     router.push("/"); // Redirect to homepage after updating task
   };
